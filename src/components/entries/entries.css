@@ -4,14 +4,6 @@
     margin: 0px auto;
 }
 
-.header {
-    background: #000000;
-    color: #ffff;
-    font-family: Ubuntu;
-    font-size: 32px;
-    line-height: 37px;
-    padding: 10px 40px;
-}
 
 .block_container {
     width: 80%;
