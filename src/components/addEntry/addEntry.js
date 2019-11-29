@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Header from "./../header/header";
-import postData from "./postEntry";
+import postData from "./postData";
 import "./addEntry.css";
 class AddEntry extends Component {
-
-
 
   render() {
     return (
@@ -27,6 +25,7 @@ class AddEntry extends Component {
                 <input
                   type="text"
                   name="title"
+                  required
                   className="form-control"
                   id="title"
                 />
@@ -47,6 +46,7 @@ class AddEntry extends Component {
                 <textarea
                   id="briefDescription"
                   name="briefDescription"
+                  required
                   className="form-control"
                 ></textarea>
               </div>
@@ -56,6 +56,7 @@ class AddEntry extends Component {
                 <textarea
                   id="description"
                   name="description"
+                  required
                   className="form-control"
                 ></textarea>
               </div>

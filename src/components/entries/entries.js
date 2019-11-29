@@ -10,7 +10,7 @@ class Entries extends Component {
         <Header/>
         <div className="block_container">
           <div className="functions">
-            <Link to={`/addentry`}>Добавить</Link>
+            <Link className="btn" to={`/addEntry`}>Добавить</Link>
           </div>
           <ListEntries/>
         </div>

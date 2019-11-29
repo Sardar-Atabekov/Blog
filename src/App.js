@@ -12,7 +12,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Entries} />
           <Route path="/addEntry" exact component={AddEntry} />
-
+          
           <Route path="*" exact component={NotFound} />
         </Switch>
       </React.Fragment>
