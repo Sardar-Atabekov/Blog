@@ -1,5 +1,6 @@
 function postData(event) {
   event.preventDefault();
+  console.log("sas");
   let formData = new FormData(event.target),
     id,
     entries = [],
@@ -12,13 +13,11 @@ function postData(event) {
     id = 1;
     localStorage.setItem("id", JSON.stringify(id));
   }
-
   data.id = id;
   formData.forEach(function(value, key) {
     data[key] = value;
   });
-
-  console.log(data);
+  
   if (localStorage.getItem("entries")) {
     entries = JSON.parse(localStorage.getItem("entries"));
     entries.push(data);
