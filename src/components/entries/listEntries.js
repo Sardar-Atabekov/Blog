@@ -22,7 +22,7 @@ class ListEntries extends Component {
                   alt="comment Icons"
                   className="commentIcons"
                 />
-                <span className="quantityComment">{entry.quantityComment}</span>
+                <span className="quantityComment">{entry.comments.length}</span>
                 <span className="time">{entry.time}</span>
               </div>
             </Link>
