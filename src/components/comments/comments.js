@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AddComment from "./addComments";
+import deleteComment from "./deleteComment";
 import "./comment.css";
 class Comments extends Component {
   constructor(props) {
@@ -10,7 +11,6 @@ class Comments extends Component {
   }
   render() {
     let data = this.state.data;
-    console.log(data);
     return (
       <div className="commentsBlock">
         {data && data.length > 0
@@ -19,6 +19,7 @@ class Comments extends Component {
                 <h3>{comment.name}</h3>
                 <div>{comment.comment}</div>
                 <time>{comment.time}</time>
+                <button className="dl" onClick={event => deleteComment(event, comment.idComment)}>Удалить</button>
               </div>
             ))
           : <div className="emptyComments">Нету комментариев</div>}

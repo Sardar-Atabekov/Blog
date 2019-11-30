@@ -9,22 +9,17 @@ class Entry extends Component {
     super(props);
     this.state = {
       data: [],
-      id: props.match.params.id
     };
   }
 
   componentDidMount() {
-    console.log(this.state.id);
-
     let data = JSON.parse(localStorage.getItem("entries"));
-    console.log(data);
-    if (data) {
-      data = data.filter(item => item.id === +this.state.id)[0];
+    if (data&&data.length>0) {
+      data = data.filter(item => item.id === +this.props.match.params.id)[0];
       this.setState({ data });
     }
   }
   render() {
-    console.log(this.state);
     let { data } = this.state;
     return (
       <div className="wrapper">

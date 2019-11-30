@@ -1,15 +1,18 @@
+.commentsBlock {
+    margin-top: 40px;
+}
+
 .addComment,
 .comment {
     margin-top: 20px;
     padding: 10px;
-
     border-radius: .625rem;
     border: 1px solid black;
 }
 
 .addComment {
     padding: 20px;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 .addComment .form-control {
@@ -27,4 +30,14 @@
 
 .comment h3 {
     margin: 0;
+}
+
+.comment .dl {
+    background: red;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    padding: .3rem 1rem;
+    color: white;
+    border-radius: 0.625em;
+    margin-left: 480px;
 }
