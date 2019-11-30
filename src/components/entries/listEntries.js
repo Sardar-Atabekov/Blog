@@ -6,7 +6,8 @@ class ListEntries extends Component {
     let data = JSON.parse(localStorage.getItem("entries"));
     return (
       <div className="listEntries">
-        {data ? (
+        {console.log(data)}
+        {data&&data.length>0 ? (
           data.map(entry => (
             <Link to={`/entry/${entry.id}`} className="entry" key={entry.id}>
               <img

@@ -3,9 +3,9 @@ import Header from "../header/header";
 import UpdateData from "./updateDate";
 class AddEntry extends Component {
   render() {
-    let id = this.props.match.params.id,
-      data = JSON.parse(localStorage.getItem("entries"));
-    data = data.filter(item => item.id === +id)[0];
+    let id = this.props.match.params.id;
+    let  data = JSON.parse(localStorage.getItem("entries"));
+    data = data&&data.filter(item => item.id === +id)[0];
 
     return (
       <div className="wrapper">
@@ -65,10 +65,10 @@ class AddEntry extends Component {
                     defaultValue={data.description}
                   ></textarea>
                 </div>
-                <button className="addBtn">Добавить</button>
+                <button className="addBtn">Изменить</button>
               </div>
             ) : (
-              ""
+              "Нету такой запись"
             )}
           </form>
         </div>

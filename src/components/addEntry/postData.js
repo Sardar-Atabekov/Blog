@@ -16,7 +16,6 @@ function postData(event) {
   }
   data.id = id;
   data.time = Time();
-  console.log(data);
   formData.forEach(function(value, key) {
     data[key] = value;
   });

@@ -17,6 +17,7 @@ function updateData(event, key) {
   localStorage.setItem("entries", JSON.stringify(entries));
 
   alert("Изменено!");
+  
 }
 
 export default updateData;
