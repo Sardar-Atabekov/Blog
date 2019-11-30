@@ -16,6 +16,7 @@ function postData(event) {
   }
   data.id = id;
   data.time = Time();
+  data.comments =[];
   formData.forEach(function(value, key) {
     data[key] = value;
   });

@@ -13,11 +13,16 @@ function updateData(event, key) {
   });
 
   let entries = JSON.parse(localStorage.getItem("entries"));
-  entries = entries.map(item => (item.id === key ? (item = data) : item));
+  entries = entries.map(item => {
+    if (item.id === key) {
+      data.comments = item.comments;
+      item = data;
+    }
+    return item;
+  });
   localStorage.setItem("entries", JSON.stringify(entries));
 
   alert("Изменено!");
-  
 }
 
 export default updateData;

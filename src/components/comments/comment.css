@@ -1,0 +1,30 @@
+.addComment,
+.comment {
+    margin-top: 20px;
+    padding: 10px;
+
+    border-radius: .625rem;
+    border: 1px solid black;
+}
+
+.addComment {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.addComment .form-control {
+    margin-left: 5px;
+}
+
+.emptyComments {
+    margin: 20px auto;
+    font-size: 1.3em;
+}
+
+.comment time {
+    margin-left: 460px;
+}
+
+.comment h3 {
+    margin: 0;
+}

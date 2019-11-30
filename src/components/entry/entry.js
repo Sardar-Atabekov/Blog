@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../header/header";
 import { Link } from "react-router-dom";
 import deleteEntry from "./deleteEntry";
+import Comment from "./../comments/comments";
 import "./entry.css";
 class Entry extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Entry extends Component {
       <div className="wrapper">
         <Header />
         <div className="block_container">
-          {data&&data.id? (
+          {data && data.id ? (
             <div className="entryBlock">
               <div className="headerEntry">
                 <h1 className="title">{data.title}</h1>
@@ -52,10 +53,11 @@ class Entry extends Component {
                   defaultValue="Удалить"
                 />
               </div>
+              <Comment comments={data.comments} id={data.id}/>
             </div>
           ) : (
             <Link className="btn" to={`/addEntry`}>
-              Сначала добавьте записи!
+              Сначала добавьте запись!
             </Link>
           )}
         </div>
