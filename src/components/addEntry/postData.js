@@ -1,6 +1,7 @@
+import Time from './../functions/Time';
+
 function postData(event) {
   event.preventDefault();
-  console.log("sas");
   let formData = new FormData(event.target),
     id,
     entries = [],
@@ -14,10 +15,12 @@ function postData(event) {
     localStorage.setItem("id", JSON.stringify(id));
   }
   data.id = id;
+  data.time = Time();
+  console.log(data);
   formData.forEach(function(value, key) {
     data[key] = value;
   });
-  
+
   if (localStorage.getItem("entries")) {
     entries = JSON.parse(localStorage.getItem("entries"));
     entries.push(data);
@@ -28,6 +31,9 @@ function postData(event) {
   }
   alert("Добавлено!");
   event.target.reset();
+
+  
+  
 }
 
 export default postData;

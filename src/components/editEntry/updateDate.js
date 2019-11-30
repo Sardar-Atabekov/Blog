@@ -1,3 +1,5 @@
+import Time from "./../functions/Time";
+
 function updateData(event, key) {
   event.preventDefault();
   console.log(key);
@@ -5,6 +7,7 @@ function updateData(event, key) {
     data = {};
 
   data.id = key;
+  data.time = Time();
   formData.forEach(function(value, key) {
     data[key] = value;
   });

@@ -1,0 +1,39 @@
+.entryBlock {
+    margin: 20px auto;
+    width: 50%;
+    padding: 5px 50px;
+    min-height: 700px;
+}
+
+.headerEntry {
+    margin-bottom: 20px;
+}
+.title, .subtitle {
+    margin: 5px;
+}
+
+.subtitle {
+    margin-bottom: 5px;
+}
+
+.dataEntry {
+    margin-left: 5px;
+}
+
+.entryBlock .entryImg {
+    width: 100%;
+    height: 350px;
+}
+.description {
+    margin-top: 15px;
+}
+
+.entryFunc {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 800px;
+}
+
+.deleteBtn {
+    background: red;
+}

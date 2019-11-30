@@ -9,7 +9,6 @@ class ListEntries extends Component {
         {data ? (
           data.map(entry => (
             <Link to={`/entry/${entry.id}`} className="entry" key={entry.id}>
-              {console.log(entry)}
               <img
                 alt={entry.title}
                 className="entryImage"
@@ -24,6 +23,7 @@ class ListEntries extends Component {
                   className="commentIcons"
                 />
                 <span className="quantityComment">{entry.quantityComment}</span>
+                <span className="time">{entry.time}</span>
               </div>
             </Link>
           ))
